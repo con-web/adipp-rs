@@ -48,6 +48,6 @@ impl Bookmark {
 pub struct Output {
     #[serde(rename = "CustomProperties")]
     pub custom_properties: Vec<CustomProperty>,
-    #[serde(rename = "CustomProperties")]
+    #[serde(rename = "Bookmarks")]
     pub bookmarks: Vec<Bookmark>,
 }

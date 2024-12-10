@@ -8,7 +8,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let reader = skip_bom::SkipEncodingBom::new(skip_bom::BomType::all(), std::io::stdin());
     let input: Vec<File> = serde_json::de::from_reader(reader)?;
 
-    let mut custom_properties: Vec<CustomProperty> = vec![];
+    let custom_properties: Vec<CustomProperty> = vec![];
     let mut bookmarks: Vec<Bookmark> = vec![];
 
     for file in input {

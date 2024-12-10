@@ -1,6 +1,6 @@
 ﻿[
   {
-    "Id": "{{"scripts/script_name.rhai" | rhai}}",
+    "Id": "{{"scripts/init.rhai" | rhai}}",
     "FriendlyName": "{{ project-name }}",
     "ExecutableFilePath": "{{ project-name }}.exe",
     "ExecutableArguments": "",
