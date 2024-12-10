@@ -1,0 +1,50 @@
+﻿[
+  {
+    "Id": "{{"scripts/script_name.rhai" | rhai}}",
+    "FriendlyName": "{{ project-name }}",
+    "ExecutableFilePath": "{{ project-name }}.exe",
+    "ExecutableArguments": "",
+    "UseJsonInput": true,
+    "JsonInputFields": [
+      20,
+      32
+    ],
+    "MaxSimultaneousInstances": 0,
+    "WaitForExit": false,
+    "ParseOutput": true,
+    "ShouldWriteErrorLog": true,
+    "ExecutionTypes": 3,
+    "AutoStart": false,
+    "ForceTermination": true,
+    "SupportsBatchProcessing": true,
+    "MaxBatchSize": 10000,
+    "FileClassFilter": [],
+    "Description": "",
+    "IconPath": "",
+    "OdtFilePaths": [],
+    "Requirements": "",
+    "Vendor": "",
+    "TimeoutForExecution": 0,
+    "Version": "0.1.0.0",
+    "ProductName": "{{ project-name }}",
+    "FileFilterSettings": {
+      "MinWidth": null,
+      "MinHeight": null,
+      "MinSize": null,
+      "MaxSize": null,
+      "IncludeCategorized": true,
+      "IncludeUncategorized": true
+    },
+    "CustomProperties": [
+      {
+        "Id": 0,
+        "Name": "Custom Property",
+        "Indexed": true,
+        "Visible": true,
+        "DataType": 0
+      }
+    ],
+    "ShowInForensicMarket": true,
+    "DisableEditing": false
+  }
+]
