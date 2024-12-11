@@ -10,6 +10,15 @@ pub struct CustomProperty {
     pub value: String,
 }
 
+impl CustomProperty {
+    pub fn new(id: usize, sha1: &str, value: &str) -> CustomProperty {
+        Self {
+            id,
+            sha1: sha1.to_string(),
+            value: value.to_string() }
+    }
+}
+
 #[derive(Serialize, Deserialize, Debug, Default)]
 pub struct Bookmark {
     #[serde(rename = "BookmarkPath")]
@@ -22,9 +31,9 @@ pub struct Bookmark {
     pub sha1: String,
 }
 
-
 impl Bookmark {
-    pub fn new(path: &str, sha1: &str) -> Self {
+
+    pub fn new(sha1: &str, path: &str) -> Self {
         Self{
             path: path.to_string(),
             html_color: "#FFFFFF".to_string(),
@@ -42,7 +51,6 @@ impl Bookmark {
         self
     }
 }
-
 
 #[derive(Serialize, Deserialize, Debug, Default)]
 pub struct Output {
