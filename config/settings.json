@@ -7,6 +7,7 @@
     "UseJsonInput": true,
     "JsonInputFields": [
       20,
+      8,
       32
     ],
     "MaxSimultaneousInstances": 0,

@@ -12,4 +12,6 @@ pub struct File {
     pub sha1: String,
     #[serde(rename = "Files")]
     pub files: Vec<BinaryCopy>,
+    #[serde(rename ="FileSize")]
+    pub file_size: usize,
 }

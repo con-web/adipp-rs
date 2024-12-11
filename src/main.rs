@@ -13,13 +13,20 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     for file in input {
         for bin_copy in file.files{
-            let bm = Bookmark::new(&file.sha1, &bin_copy.display_directory)
-                .with_comment("i am a comment")
-                .with_color("#AABBCC");
-            bookmarks.push(bm);
             let cp = CustomProperty::new(0, &file.sha1, &bin_copy.display_directory);
             custom_properties.push(cp);
         }
+        let bm = if file.file_size > 1024*1024 {
+            Bookmark::new(&file.sha1, "size/big")
+                .with_comment("i am a comment")
+                .with_color("#AABBCC")
+        } else {
+            Bookmark::new(&file.sha1, "size/not_so_big")
+                .with_comment("i am a comment")
+                .with_color("#AABBCC")
+        };
+
+        bookmarks.push(bm);
     }
 
     let output = Output {custom_properties, bookmarks};
